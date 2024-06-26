@@ -5,8 +5,6 @@ on:
   push:
     paths-ignore:
     - '.gitignore'
-    - 'LICENSE'
-    - 'README.md'
 
 jobs:
   shellcheck:
@@ -15,7 +13,7 @@ jobs:
   svglint:
     uses: ./.github/workflows/svglint.yml
 
-  image-generation:
+  generate-images:
     needs:
         - shellcheck
         - svglint
