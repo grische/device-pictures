@@ -10,13 +10,13 @@ on:
 
 jobs:
   shellcheck:
-    uses: ./.github/workflows/workflows/shellcheck.yml
+    uses: ./.github/workflows/shellcheck.yml
 
   svglint:
-    uses: ./.github/workflows/workflows/svglint.yml
+    uses: ./.github/workflows/svglint.yml
 
   image-generation:
     needs:
         - shellcheck
         - svglint
-    uses: ./.github/workflows/workflows/svglint.yml
+    uses: ./.github/workflows/svglint.yml
