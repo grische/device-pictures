@@ -3,6 +3,7 @@
 set -eEu
 set -o pipefail  # avoid masking failures in pipes
 shopt -s nullglob  # do not run loops if the glob has not found anything
+echo Test
 
 # recreating svg images from external sources
 CREATE_INITIAL=${CREATE_INITIAL:-}
