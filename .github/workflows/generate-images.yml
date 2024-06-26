@@ -41,7 +41,7 @@ jobs:
           name: device-pictures-jpg
           compression-level: 0 # tar is already compressed
           if-no-files-found: error
-          path: device-pictures-jpg.bz2
+          path: device-pictures-jpg.tar.bz2
 
       - name: upload PNG archive
         uses: actions/upload-artifact@v4
@@ -49,4 +49,4 @@ jobs:
           name: device-pictures-png
           compression-level: 0 # tar is already compressed
           if-no-files-found: error
-          path: device-pictures-png.bz2
+          path: device-pictures-png.tar.bz2
