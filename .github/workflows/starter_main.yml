@@ -4,7 +4,9 @@ on:
   workflow_call:
   push:
     paths-ignore:
-    - '.gitignore'
+      - '.gitignore'
+    branches:
+      - main
 
 jobs:
   shellcheck:
