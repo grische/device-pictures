@@ -6,9 +6,11 @@
       push:
         paths:
           - '**.svg'
+          - '.github/workflows/generate-images.yml'
       pull_request:
         paths:
           - '**.svg'
+          - '.github/workflows/generate-images.yml'
 
     jobs:
       svglint:
