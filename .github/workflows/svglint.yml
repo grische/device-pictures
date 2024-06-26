@@ -3,14 +3,10 @@
 
     on:  # yamllint disable-line rule:truthy
       workflow_dispatch:
-      push:
-        paths:
-          - '**.svg'
-          - '.github/workflows/generate-images.yml'
       pull_request:
         paths:
           - '**.svg'
-          - '.github/workflows/generate-images.yml'
+      workflow_call:
 
     jobs:
       svglint:

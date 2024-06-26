@@ -3,14 +3,7 @@ name: Generate Images
 
 on:  # yamllint disable-line rule:truthy
   workflow_dispatch:
-  # run after svglint passed
-  workflow_run:
-    workflows:
-      - "SVG Linting"
-    branches:
-      - main
-    types:
-      - completed
+  workflow_call:
 
 jobs:
   conversion:
