@@ -26,10 +26,9 @@ jobs:
       - name: package images
         shell: bash
         run: |
-            common_files="LICENSE.md README.md pictures-svg/"
             # The tar is required to preserve symlinks
-            tar cvf device-pictures-jpg.tar $common_files pictures-jpg/
-            tar cvf device-pictures-png.tar $common_files pictures-png/
+            tar cvf device-pictures-jpg.tar README.md pictures-jpg/
+            tar cvf device-pictures-png.tar README.md pictures-png/
 
       - name: upload JPG archive
         uses: actions/upload-artifact@v4
