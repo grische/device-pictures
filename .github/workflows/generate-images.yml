@@ -32,21 +32,19 @@ jobs:
       - name: compress images
         run: |
             # This is required to preserve symlinks
-            tar cvfj device-pictures-jpg.tar.bz2 pictures-jpg/
-            tar cvfj device-pictures-png.tar.bz2 pictures-png/
+            tar cvf device-pictures-jpg.tar pictures-jpg/
+            tar cvf device-pictures-png.tar pictures-png/
 
       - name: upload JPG archive
         uses: actions/upload-artifact@v4
         with:
-          name: device-pictures-jpg
-          compression-level: 0 # tar is already compressed
+          name: device-pictures-jpg.tar
           if-no-files-found: error
-          path: device-pictures-jpg.tar.bz2
+          path: device-pictures-jpg.tar
 
       - name: upload PNG archive
         uses: actions/upload-artifact@v4
         with:
-          name: device-pictures-png
-          compression-level: 0 # tar is already compressed
+          name: device-pictures-png.tar
           if-no-files-found: error
-          path: device-pictures-png.tar.bz2
+          path: device-pictures-png.tar
