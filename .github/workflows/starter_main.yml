@@ -19,4 +19,4 @@ jobs:
     needs:
         - shellcheck
         - svglint
-    uses: ./.github/workflows/svglint.yml
+    uses: ./.github/workflows/generate-images.yml
