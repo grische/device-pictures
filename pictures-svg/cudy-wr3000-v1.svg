@@ -356,4 +356,4 @@
            rdf:resource="http://creativecommons.org/ns#DerivativeWorks" /><cc:requires
            rdf:resource="http://creativecommons.org/ns#ShareAlike" /></cc:License><cc:Work
          rdf:about=""><cc:license
-           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" /><dc:creator><cc:Agent><dc:title>Grische</dc:title></cc:Agent></dc:creator><dc:title>Cudy WR3000</dc:title></cc:Work></rdf:RDF></metadata></svg>
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" /><dc:creator><cc:Agent><dc:title>Test</dc:title></cc:Agent></dc:creator><dc:title>Cudy WR3000</dc:title></cc:Work></rdf:RDF></metadata></svg>
