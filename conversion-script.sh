@@ -11,6 +11,8 @@ CREATE_JPG=${CREATE_JPG:-true}
 
 CURRENT_DIR=$PWD
 
+echo $thisdoesnotexist
+
 if [ -n "$CREATE_INITIAL" ];then
     echo "cloning repos into repos"
     mkdir -p repos
