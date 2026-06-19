@@ -9,15 +9,19 @@ jobs:
   conversion:
     name: Generate Images
     runs-on: ubuntu-latest
+    # Patched Inkscape (no headless GtkRecentManager warning), built and
+    # published from github.com/grische/inkscape. The image must be public.
+    # See https://gitlab.com/inkscape/inkscape/-/work_items/5419
     container:
-      image: linuxserver/inkscape:1.4.2
+      image: ghcr.io/grische/inkscape:1.4.2-headless
     steps:
       - uses: actions/checkout@v6
 
       - name: install dependencies
         run: |
-            apk --no-cache add imagemagick
-            apk --no-cache add exiftool
+            export DEBIAN_FRONTEND=noninteractive
+            apt-get update
+            apt-get install -y --no-install-recommends imagemagick libimage-exiftool-perl
 
       - name: convert images
         run: |
